@@ -11,16 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513102413) do
-
-  create_table "blogs", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.string   "language"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "content_type"
-  end
+ActiveRecord::Schema.define(version: 20140616115946) do
 
   create_table "newsletters", force: true do |t|
     t.text     "to"

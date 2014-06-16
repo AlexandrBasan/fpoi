@@ -168,11 +168,6 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
 .stats {
   overflow: auto;
   a {
@@ -194,13 +189,6 @@ aside {
   }
 }
 
-.user_avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
-  }
-}
 
 /* forms */
 
@@ -243,34 +231,6 @@ input {
   }
 }
 
-/* backtotop button */
-#backtotop {
-  background: #F7F7F7;
-  border: 1px solid #CCCCCC;
-  border-radius: 5px 5px 5px 5px;
-  bottom: 10px;
-  color: #333333;
-  cursor: pointer;
-  display: none;
-  height: 30px;
-  line-height: 30px;
-  padding: 5px;
-  position: fixed;
-  right: 10px;
-  text-align: center;
-  width: 31px; height: 31px; /*width: 100px;*/
-  /* text-indent: -9999px; */
-  z-index: 1;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  background: url("/assets/backtotop30.png")no-repeat left center;
-
-
-}
-#backtotop:hover {
-  background: #EEEEEE;
-  background: url("/assets/backtotop30black.png")no-repeat left center;
-}
 
 /* microposts */
 
@@ -291,29 +251,12 @@ aside {
   }
 }
 
-.page-contact {
-  position: relative;
-  padding-bottom: 50px;
-}
-
 .black-bg {
   background-color: #292929;
 }
 
 .white {
   color: #fff;
-}
-
-.page-contact #map-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  opacity: .1;
-  filter: alpha(opacity=10);
-  overflow: hidden;
 }
 
 .line-divider:after {
@@ -343,4 +286,16 @@ aside {
   margin: 0px;
   padding: 0px;
   width: 100%;
+}
+
+.menu {
+  position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  font-weight: bold;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  width: 250px;
 }
