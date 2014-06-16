@@ -69,6 +69,7 @@ class ObjectbasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def objectbasis_params
-      params[:objectbasis]
+      params.require(:objectbase).permit(:name, :email, :company_name,
+                                   :company_type, :address, :website, :description)
     end
 end

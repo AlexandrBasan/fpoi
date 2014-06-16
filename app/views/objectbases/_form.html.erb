@@ -1,15 +1,3 @@
-<%= form_for(@objectbasis) do |f| %>
-  <% if @objectbasis.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@objectbasis.errors.count, "error") %> prohibited this objectbasis from being saved:</h2>
-
-      <ul>
-      <% @objectbasis.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -17,24 +5,26 @@
               <%= render 'shared/error_messages', object: f.object %>
 
               <%= f.label :name %>
-              <%= f.text_field :name %>
+              <%= f.text_field :name, class: "input-sm" %>
 
               <%= f.label :email %>
-              <%= f.text_field :email %>
+              <%= f.text_field :email, class: "input-sm" %>
 
               <%= f.label :company_name %>
-              <%= f.text_field :company_name %>
+              <%= f.text_field :company_name, class: "input-sm" %>
 
               <%= f.label :company_type %>
               <%= f.select :company_type, options_for_select([["StartUp", "StartUp"], ["Accelerator", "Accelerator"], ["Incubator", "Incubator"], ["Coworking", "Coworking"], ["Investor", "Investor"], ["Consalting", "Consalting"], ["Event", "Event"]], selected: :option) %>
 
 
               <%= f.label :address %>
-              <%= f.text_field :address, :id => "autocomplete" %>
+              <%= f.text_field :address, :id => "autocomplete", class: "input-sm" %>
+
               <%= f.label :website %>
-              <%= f.text_field :website %>
+              <%= f.text_field :website, class: "input-sm" %>
+
               <%= f.label :description %>
-              <%= f.text_field :description %>
+              <%= f.text_field :description, class: "input-sm" %>
 
               <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
           <% end %>
@@ -42,4 +32,3 @@
         </div>
       </div>
     </div>
-<% end %>
