@@ -10,7 +10,37 @@
       </ul>
     </div>
   <% end %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= form_for(@objectbasis) do |f| %>
+              <%= render 'shared/error_messages', object: f.object %>
 
+              <%= f.label :name %>
+              <%= f.text_field :name %>
+
+              <%= f.label :email %>
+              <%= f.text_field :email %>
+
+              <%= f.label :company_name %>
+              <%= f.text_field :company_name %>
+
+              <%= f.label :company_type %>
+              <%= f.text_field :company_type %>
+
+              <%= f.label :address %>
+              <%= f.text_field :address, :id => "autocomplete" %>
+              <%= f.label :website %>
+              <%= f.text_field :website %>
+              <%= f.label :description %>
+              <%= f.text_field :description %>
+
+              <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>

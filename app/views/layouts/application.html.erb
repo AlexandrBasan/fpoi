@@ -11,6 +11,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <%= javascript_include_tag "google_maps" %>
     <!-- Google maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&language=en"></script>
+    <%= javascript_include_tag "google_maps_autocomplete" %>
   </head>
   <body onload="initialize(), setMarkers()">
     <%= render 'layouts/header' %>

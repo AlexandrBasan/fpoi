@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616115946) do
+ActiveRecord::Schema.define(version: 20140616131835) do
 
   create_table "newsletters", force: true do |t|
     t.text     "to"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 20140616115946) do
     t.datetime "updated_at"
     t.string   "subject"
     t.string   "language"
+  end
+
+  create_table "objectbases", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "company_name"
+    t.string   "company_type"
+    t.string   "address"
+    t.string   "website"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
