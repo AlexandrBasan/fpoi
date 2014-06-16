@@ -8,9 +8,7 @@ SampleApp::Application.routes.draw do
 
   get '/blogs_:content_type' => 'blogs#index', as: 'blogs_content_type'
   resources :users
-  resources :sessions,      only: [:new, :create, :destroy]
-  resources :blogs
-  root 'static_pages#home'
+  resources :sessions,      only: [:new, :create, :destroy]  root 'static_pages#home'
   #match '/privacy_and_security', to: 'static_pages#privacy_and_security', via: 'get'
   #match '/terms_of_use', to: 'static_pages#terms_of_use', via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'

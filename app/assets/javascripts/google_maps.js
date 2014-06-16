@@ -4,12 +4,12 @@ var layer;
 var MY_MAPTYPE_ID = 'custom_style';
 function initialize() {
     geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(30.000000, 25.000000);
+    var latlng = new google.maps.LatLng(30.000000, 50.000000);
     var mapOptions = {
         zoom: 2,
         minZoom: 2,
-        maxZoom: 3,
-        panControl: false,
+        maxZoom: 12,
+        panControl: true,
         zoomControl: true,
         scaleControl: false,
         mapTypeControl: false,
@@ -56,10 +56,6 @@ function initialize() {
     // fusion table country style
     layer = new google.maps.FusionTablesLayer({
         suppressInfoWindows: true,
-        query: {
-            select: 'geometry',
-            from: '1ySn7x9MmCbikjuRx_0albqI5Avap7GpafgJPw-zw'
-        },
         styles: [{
            polygonOptions: {
                fillColor: "#e0e1e5",

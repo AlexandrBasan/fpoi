@@ -1,17 +1,17 @@
-<header class="navbar navbar-default navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to image_tag("teleport_logo_eng_0.png", alt: "Teleport SaaS"), root_path + "#top", :class => "brand" %>
-      <nav>
-        <ul class="nav nav-pills pull-right">
-          <li><%= link_to "Home", root_path, class: "btn btn-large btn-success glyphicon glyphicon-play" %></li>
-          <li><%= link_to "Help", root_path, class: "btn btn-large btn-primary glyphicon glyphicon-play" %></li>
-          <button type="button" id="tour" class="btn btn-default btn-lg" data-demo="" onclick="tour()">
-            <span class="glyphicon glyphicon-play"></span>
-            <%= I18n.t 'tour.label' %>
-          </button>
-        </ul>
-      </nav>
-    </div>
+<div class="menu" id="menu">
+<div class="wrapper">
+  <div class="text-center">
+  <%= link_to image_tag("teleport_logo_eng_0.png", alt: "Teleport SaaS"), root_path + "#top", :class => "brand" %>
   </div>
-</header>
+<div class="head">
+  <div>
+    <h6>
+      This map was made to connect and promote the New Zealand startup community. Put yourself on the map!
+    </h6>
+  </div>
+</div>
+  <ul class="nav nav-pills pull-right">
+    <li><%= link_to " Home", root_path, class: "btn btn-xs btn-success glyphicon glyphicon-play" %></li>
+  </ul>
+</div>
+</div>
