@@ -300,6 +300,25 @@ html, body, #map-canvas {
 }
 
 .head{
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   text-align: justify;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  margin-top: 11px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #999999;
+  border-radius: 10px;
 }

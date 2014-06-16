@@ -12,7 +12,7 @@
   <% end %>
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <%= form_for(@objectbasis) do |f| %>
               <%= render 'shared/error_messages', object: f.object %>
 
@@ -26,7 +26,8 @@
               <%= f.text_field :company_name %>
 
               <%= f.label :company_type %>
-              <%= f.text_field :company_type %>
+              <%= f.select :company_type, options_for_select([["StartUp", "StartUp"], ["Accelerator", "Accelerator"], ["Incubator", "Incubator"], ["Coworking", "Coworking"], ["Investor", "Investor"], ["Consalting", "Consalting"], ["Event", "Event"]], selected: :option) %>
+
 
               <%= f.label :address %>
               <%= f.text_field :address, :id => "autocomplete" %>
@@ -41,7 +42,4 @@
         </div>
       </div>
     </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

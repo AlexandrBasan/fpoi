@@ -1,7 +1,7 @@
 <div class="menu" id="menu">
 <div class="wrapper">
   <div class="text-center">
-  <%= link_to image_tag("logo200.png", alt: "StartUp world map"), root_path + "#top", :class => "brand" %>
+  <%= link_to image_tag("logo200.png", alt: "StartUp world map"), root_path, :class => "brand" %>
   </div>
 <div class="head">
   <div>
@@ -11,15 +11,56 @@
   </div>
 </div>
   <div class="head" style="text-align: center">
+  <%= link_to new_objectbasis_path do %>
   <button type="button" class="btn btn-default btn-success btn-xs">
-    <span class="glyphicon glyphicon-plus"></span> Add your StartUp now! <%= link_to ('Add your StartUp now!'), new_objectbasis_path %>
+    <span class="glyphicon glyphicon-plus"></span> Add your StartUp now!
   </button>
+  <% end %>
   </div>
   <div class="head">
   <div class="form-group">
     <input type="email" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter company name...">
   </div>
   </div>
+
+  <% @startup = Objectbase.where(company_type: "StartUp").count %>
+  <% @accelerator = Objectbase.where(company_type: "Accelerator").count %>
+  <% @incubator = Objectbase.where(company_type: "Incubator").count %>
+  <% @coworking = Objectbase.where(company_type: "Coworking").count %>
+  <% @investor = Objectbase.where(company_type: "Investor").count %>
+  <% @consalting = Objectbase.where(company_type: "Consalting").count %>
+  <% @event = Objectbase.where(company_type: "Event").count %>
+
+  <ul class="list-group">
+    <li class="list-group-item">
+      <span class="badge"><%= @startup %></span>
+      <%= image_tag("startup.png") %> StartUp
+    </li>
+    <li class="list-group-item">
+      <span class="badge"><%= @accelerator %></span>
+      <%= image_tag("accelerator.png") %> Accelerator
+    </li>
+    <li class="list-group-item">
+      <span class="badge"><%= @incubator %></span>
+      <%= image_tag("incubator.png") %> Incubator
+    </li>
+    <li class="list-group-item">
+      <span class="badge"><%= @coworking %></span>
+      <%= image_tag("coworking.png") %> Coworking
+    </li>
+    <!--<li class="list-group-item">
+      <span class="badge"><%= @investor %></span>
+      <%= image_tag("investor.png") %> Investor
+    </li>
+    <li class="list-group-item">
+      <span class="badge"><%= @consalting %></span>
+      <%= image_tag("service.png") %> Consalting
+    </li>
+    <li class="list-group-item">
+      <span class="badge"><%= @event %></span>
+      <%= image_tag("event.png") %> Event
+    </li>-->
+  </ul>
 
 </div>
 </div>
