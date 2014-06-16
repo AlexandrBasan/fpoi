@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.1.0'
-#ruby-gemset=teleport_ds_com
+#ruby-gemset=fpoi
 
 gem 'rails', '4.0.3'
 gem 'bootstrap-sass'
