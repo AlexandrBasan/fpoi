@@ -1,17 +1,25 @@
 <div class="menu" id="menu">
 <div class="wrapper">
   <div class="text-center">
-  <%= link_to image_tag("teleport_logo_eng_0.png", alt: "Teleport SaaS"), root_path + "#top", :class => "brand" %>
+  <%= link_to image_tag("logo200.png", alt: "StartUp world map"), root_path + "#top", :class => "brand" %>
   </div>
 <div class="head">
   <div>
     <h6>
-      This map was made to connect and promote the New Zealand startup community. Put yourself on the map!
+      This map was made to connect and promote world startup community. Put yourself on the map!
     </h6>
   </div>
 </div>
-  <ul class="nav nav-pills pull-right">
-    <li><%= link_to " Home", root_path, class: "btn btn-xs btn-success glyphicon glyphicon-play" %></li>
-  </ul>
+  <div class="head" style="text-align: center">
+  <button type="button" class="btn btn-default btn-success btn-xs">
+    <span class="glyphicon glyphicon-plus"></span> Add your StartUp now!
+  </button>
+  </div>
+  <div class="head">
+  <div class="form-group">
+    <input type="email" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter company name...">
+  </div>
+  </div>
+
 </div>
 </div>

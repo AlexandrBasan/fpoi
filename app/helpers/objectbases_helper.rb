@@ -1,0 +1,2 @@
+module ObjectbasesHelper
+end

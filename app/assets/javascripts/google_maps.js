@@ -23,53 +23,13 @@ function initialize() {
     // custom map style
     var featureOpts = [
         {
-            stylers: [
-                { hue: '#e0e1e5' },
-               // { visibility: 'simplified' },
-                { gamma: 1.5 },
-                { weight: 0.5 }
-            ]
-        },
-        {
-            elementType: 'labels',
-            stylers: [
-                { visibility: 'on' }
-            ]
-        },
-        {
-            featureType: 'water',
-            stylers: [
-                { color: '#ffffff' }
-            ]
-        },{
-            featureType: 'administrative.locality',
-            elementType: 'labels',
-            stylers: [
-                { hue: '#0022ff' },
-                { saturation: 50 },
-                { lightness: -10 },
-                { gamma: 0.90 }
-            ]
+
         }
     ];
     // custom map style
     // fusion table country style
     layer = new google.maps.FusionTablesLayer({
-        suppressInfoWindows: true,
-        styles: [{
-           polygonOptions: {
-               fillColor: "#e0e1e5",
-               fillOpacity: 0.1
-            }
-        }, {
-            // Ukraine
-            where: 'Teleport = 1',
-            polygonOptions: {
-                fillColor: "#656565",
-                fillOpacity: 0.4
-            }
-        }
-        ]
+
     });
     // fusion table country style
 
